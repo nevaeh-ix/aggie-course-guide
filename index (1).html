@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Course planning suggestions grounded in NC A&T Computer Science handbook courses and prerequisites.">
+<title>Aggie Course Assistant | NC A&T</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%230c2340'/%3E%3Cpath d='M20 7 31 30h-7l-2-5h-6l-2 5H9L20 7Zm0 9-2 5h4l-2-5Z' fill='%23f2c75c'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><div class="mark" aria-hidden="true">A</div><div>Aggie Course Assistant<small>North Carolina A&amp;T · College of Engineering</small></div></div><div class="scope-pill">Course planning prototype</div></header>
+<main>
+<section class="major-stage" id="majorGate" aria-labelledby="majorQuestion">
+<div class="major-copy"><div class="eyebrow">Step 01 · choose your program</div><h1 id="majorQuestion">Which engineering major are you studying?</h1><p>Your major changes which courses make sense next. Start here so the suggestions use the right course path.</p></div>
+<div class="major-form"><label for="program">Choose your major</label><select id="program"><option value="" selected disabled>Select a College of Engineering program</option></select><button type="button" class="primary" id="continueButton">Continue</button><div class="step-note"><span class="step-number">01</span><span>Next, add your interests and completed classes.</span></div></div>
+</section>
+<div id="appShell" hidden>
+<section class="intro"><div class="eyebrow"><span id="chosenMajor">Computer Science</span> · Your course plan</div><h1>Find a course that fits what you want to learn.</h1><p>Share a topic and the classes you have completed. Suggestions use the course and prerequisite details available for your program. <button type="button" class="change-major" id="changeMajorTop">Change major</button></p></section>
+<section class="scope-panel" id="unsupported" hidden><h2 id="unsupportedTitle">Course data is still being added</h2><p id="unsupportedText"></p><button type="button" id="chooseAnother">Choose another major</button></section>
+<div id="mainApp" hidden><div class="layout">
+<aside class="card profile" aria-labelledby="profile-title"><h2 class="card-title" id="profile-title">Your course profile</h2><p class="subtext">Update these details before you ask.</p>
+<div class="field"><label for="standing">Class standing</label><select id="standing"><option value="freshman">Freshman</option><option value="sophomore">Sophomore</option><option value="junior" selected>Junior</option><option value="senior">Senior</option></select></div>
+<div class="field"><label for="completed">Courses completed</label><input id="completed" list="courseOptions" value="" placeholder="Example: COMP 163, COMP 280"><datalist id="courseOptions"></datalist><div class="hint">Separate course codes with commas. You can use the buttons below.</div><div class="quick-courses" id="quickCourses"></div></div>
+<label class="checkline"><input type="checkbox" id="stats"><span>I completed a statistics elective</span></label><label class="checkline"><input type="checkbox" id="permission"><span>I have instructor permission when required</span></label>
+<div class="field"><label for="interest">What are you interested in?</label><input id="interest" value="" placeholder="Example: cybersecurity, data, games"></div>
+<button type="button" class="primary" id="askButton">Get course suggestions</button></aside>
+<section class="card chat" aria-labelledby="chat-title"><div class="chat-head"><h2 id="chat-title">Ask about your next class</h2><span class="status">Prototype · handbook-based</span></div>
+<div class="messages" id="messages" aria-live="polite" aria-relevant="additions text"></div>
+<form class="chat-form" id="chatForm"><label class="sr-only" for="question">Ask a course question</label><textarea id="question" placeholder="For example: Which courses could help me learn about data analytics?" rows="2"></textarea><button class="send" type="submit">Ask</button></form>
+<div class="disclosure"><strong>How this prototype answers:</strong> It matches topic words to tagged courses and applies the prerequisite rules in the current course data. No live language model is connected yet.</div></section>
+</div></div></div>
+</main>
+<footer class="foot">Course information: <a href="https://www.ncat.edu/coe/departments/cs/undergrad-programs/cs-undergraduate-handbook-2025.pdf" target="_blank" rel="noreferrer">NC A&amp;T Computer Science Undergraduate Handbook (2025)</a>. Confirm course availability and advising requirements with your department.</footer>
+<script src="app.js" defer></script>
+</body></html>
