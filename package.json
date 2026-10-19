@@ -1,0 +1,24 @@
+{
+  "name": "aggie-course-guide",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Interest-based course exploration for NC A&T engineering students",
+  "engines": {
+    "node": ">=24.19.0"
+  },
+  "scripts": {
+    "setup": "python3 scripts/setup_assets.py",
+    "verify-assets": "python3 scripts/setup_assets.py --verify",
+    "build": "node scripts/build-site.mjs",
+    "start": "python3 -m http.server 8000 --bind 127.0.0.1 --directory dist",
+    "test": "node --experimental-vm-modules --test tests/*.test.mjs",
+    "smoke": "node --experimental-vm-modules tests/worker-smoke.mjs",
+    "benchmark": "node --experimental-vm-modules evaluation/run-benchmark.mjs",
+    "verify-results": "node evaluation/verify-results.mjs",
+    "plot": "python3 evaluation/plot-results.py"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "3.7.2"
+  }
+}

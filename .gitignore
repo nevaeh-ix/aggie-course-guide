@@ -1,0 +1,17 @@
+.env
+.env.*
+node_modules/
+dist/
+models/
+catalog.json
+embeddings.json
+vendor/*.js
+vendor/*.mjs
+vendor/*.wasm
+*.download
+__pycache__/
+.venv/
+evaluation/recorded-results.json
+evaluation/latest-results.json
+evaluation/latest-results.csv
+evaluation/figures/

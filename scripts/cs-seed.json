@@ -1,0 +1,768 @@
+{
+  "PROGRAMS": [
+    {
+      "id": "BS-AE",
+      "name": "Architectural Engineering"
+    },
+    {
+      "id": "BS-CE",
+      "name": "Civil Engineering"
+    },
+    {
+      "id": "BS-CS",
+      "name": "Computer Science"
+    },
+    {
+      "id": "BS-ME",
+      "name": "Mechanical Engineering"
+    },
+    {
+      "id": "BS-MEA",
+      "name": "Mechanical Engineering (Aerospace)"
+    },
+    {
+      "id": "BS-ISE",
+      "name": "Industrial and Systems Engineering"
+    },
+    {
+      "id": "BS-EE",
+      "name": "Electrical Engineering"
+    },
+    {
+      "id": "BS-CpE",
+      "name": "Computer Engineering"
+    },
+    {
+      "id": "BS-BIOE-G",
+      "name": "Bioengineering (General)"
+    },
+    {
+      "id": "BS-BIOE-I",
+      "name": "Bioengineering (Innovation)"
+    },
+    {
+      "id": "BS-BE-BP",
+      "name": "Biological Engineering (Bioprocess Engineering)"
+    },
+    {
+      "id": "BS-BE-NR",
+      "name": "Biological Engineering (Natural Resources Engineering)"
+    },
+    {
+      "id": "BS-CHE",
+      "name": "Chemical Engineering"
+    }
+  ],
+  "COURSES": [
+    {
+      "code": "GEEN 111",
+      "title": "College of Engineering Colloquium",
+      "credits": 1,
+      "category": "required",
+      "tags": [
+        "engineering",
+        "career"
+      ]
+    },
+    {
+      "code": "COMP 121",
+      "title": "Computer Science Freshmen Colloquium",
+      "credits": 1,
+      "category": "required",
+      "tags": [
+        "career"
+      ]
+    },
+    {
+      "code": "COMP 163",
+      "title": "Introduction to Computer Programming",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "programming",
+        "software"
+      ]
+    },
+    {
+      "code": "COMP 167",
+      "title": "Computer Programming Design",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "programming",
+        "software"
+      ]
+    },
+    {
+      "code": "COMP 180",
+      "title": "Discrete Structures",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "theory",
+        "math"
+      ]
+    },
+    {
+      "code": "COMP 267",
+      "title": "Data Base Design",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "database",
+        "data"
+      ]
+    },
+    {
+      "code": "COMP 200",
+      "title": "Computer Science Sophomore Colloquium",
+      "credits": 1,
+      "category": "required",
+      "tags": [
+        "career"
+      ]
+    },
+    {
+      "code": "COMP 280",
+      "title": "Data Structures",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "programming",
+        "algorithms"
+      ]
+    },
+    {
+      "code": "COMP 285",
+      "title": "Design and Analysis of Algorithms",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "algorithms",
+        "theory"
+      ]
+    },
+    {
+      "code": "COMP 300",
+      "title": "Computer Science Junior Colloquium",
+      "credits": 1,
+      "category": "required",
+      "tags": [
+        "career"
+      ]
+    },
+    {
+      "code": "COMP 322",
+      "title": "Internet Systems",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "networks",
+        "systems"
+      ]
+    },
+    {
+      "code": "COMP 350",
+      "title": "Operating Systems",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "systems"
+      ]
+    },
+    {
+      "code": "COMP 360",
+      "title": "Principles of Programming Languages",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "programming",
+        "theory"
+      ]
+    },
+    {
+      "code": "COMP 365",
+      "title": "Artificial Intelligence and Machine Learning",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "ai",
+        "machine learning",
+        "data"
+      ]
+    },
+    {
+      "code": "COMP/ECEN 375",
+      "title": "Computer Architecture and Organization",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "systems",
+        "hardware"
+      ]
+    },
+    {
+      "code": "COMP 385",
+      "title": "Theory of Computing",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "theory"
+      ]
+    },
+    {
+      "code": "COMP 390",
+      "title": "Social Implications of Computing",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "ethics",
+        "society"
+      ]
+    },
+    {
+      "code": "COMP 410",
+      "title": "Software Engineering",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "software",
+        "teamwork"
+      ]
+    },
+    {
+      "code": "COMP 476",
+      "title": "Networked Computer Systems",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "networks",
+        "systems"
+      ]
+    },
+    {
+      "code": "COMP 495",
+      "title": "Senior Project I",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "software",
+        "teamwork"
+      ]
+    },
+    {
+      "code": "COMP 496",
+      "title": "Senior Project II",
+      "credits": 3,
+      "category": "required",
+      "tags": [
+        "software",
+        "teamwork"
+      ]
+    },
+    {
+      "code": "COMP 320",
+      "title": "Fundamentals of Cybersecurity",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "security",
+        "cybersecurity"
+      ]
+    },
+    {
+      "code": "COMP 321",
+      "title": "Computer System Security",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "systems"
+      ]
+    },
+    {
+      "code": "COMP 323",
+      "title": "Introduction to Health Care Information Systems",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "health",
+        "data"
+      ]
+    },
+    {
+      "code": "COMP 340",
+      "title": "Game Intelligence",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "games",
+        "ai"
+      ]
+    },
+    {
+      "code": "COMP 356",
+      "title": "Computational Hip-Hop and Object-Oriented Design",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "programming",
+        "design"
+      ]
+    },
+    {
+      "code": "COMP 361",
+      "title": "Data Analytics in Python",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "data",
+        "analytics",
+        "python"
+      ]
+    },
+    {
+      "code": "COMP 363",
+      "title": "Object Oriented Programming",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "programming"
+      ]
+    },
+    {
+      "code": "COMP 368",
+      "title": "Object-Oriented Software Development",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "software",
+        "design"
+      ]
+    },
+    {
+      "code": "COMP 420",
+      "title": "Applied Network Security",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "networks"
+      ]
+    },
+    {
+      "code": "COMP 421",
+      "title": "Security Management for Information Systems",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "management"
+      ]
+    },
+    {
+      "code": "COMP 422",
+      "title": "Information Privacy and Security",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "security",
+        "privacy"
+      ]
+    },
+    {
+      "code": "COMP 423",
+      "title": "Web Security",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "web"
+      ]
+    },
+    {
+      "code": "COMP 440",
+      "title": "Game Design",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "games",
+        "design"
+      ]
+    },
+    {
+      "code": "COMP 454",
+      "title": "Virtual and Augmented Reality",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "games",
+        "graphics"
+      ]
+    },
+    {
+      "code": "COMP 469",
+      "title": "Introduction to Parallel Programming",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "programming",
+        "systems"
+      ]
+    },
+    {
+      "code": "COMP 494",
+      "title": "Independent Study",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "research"
+      ]
+    },
+    {
+      "code": "COMP 411",
+      "title": "Introduction to System Testing and Evaluation",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "software",
+        "testing"
+      ]
+    },
+    {
+      "code": "COMP 452",
+      "title": "Network Science",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "networks",
+        "data"
+      ]
+    },
+    {
+      "code": "COMP 453",
+      "title": "Introduction to Computer Graphics",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "graphics",
+        "games"
+      ]
+    },
+    {
+      "code": "COMP 463",
+      "title": "Introduction to Compiler Design",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "programming",
+        "systems"
+      ]
+    },
+    {
+      "code": "COMP 468",
+      "title": "Introduction to Data Mining",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "data",
+        "analytics"
+      ]
+    },
+    {
+      "code": "COMP 485",
+      "title": "Special Topics in Computer Science",
+      "credits": null,
+      "category": "elective",
+      "tags": [
+        "research"
+      ]
+    },
+    {
+      "code": "BUAN 335",
+      "title": "Management of Information Resources",
+      "credits": null,
+      "category": "outside elective",
+      "tags": [
+        "management",
+        "data"
+      ]
+    },
+    {
+      "code": "ECEN 427",
+      "title": "Introduction to Microprocessors",
+      "credits": null,
+      "category": "outside elective",
+      "tags": [
+        "hardware",
+        "systems"
+      ]
+    },
+    {
+      "code": "ISEN 415",
+      "title": "Discrete Event Systems Model Simulation",
+      "credits": null,
+      "category": "outside elective",
+      "tags": [
+        "simulation",
+        "systems"
+      ]
+    },
+    {
+      "code": "MATH 365",
+      "title": "Introduction to Data Science",
+      "credits": null,
+      "category": "outside elective",
+      "tags": [
+        "data",
+        "analytics"
+      ]
+    },
+    {
+      "code": "CST 340",
+      "title": "Introduction to Mainframe Operations",
+      "credits": null,
+      "category": "outside elective",
+      "tags": [
+        "systems"
+      ]
+    }
+  ],
+  "PREREQUISITES": {
+    "COMP 320": [
+      {
+        "course": null,
+        "type": "standing",
+        "logic": "all",
+        "text": "Junior standing"
+      }
+    ],
+    "COMP 321": [
+      {
+        "course": "COMP 285",
+        "type": "course",
+        "logic": "all",
+        "text": "COMP 285"
+      }
+    ],
+    "COMP 323": [
+      {
+        "course": null,
+        "type": "standing",
+        "logic": "all",
+        "text": "Junior standing"
+      }
+    ],
+    "COMP 340": [
+      {
+        "course": "COMP 280",
+        "type": "course",
+        "logic": "all",
+        "text": "COMP 280"
+      }
+    ],
+    "COMP 356": [
+      {
+        "course": "COMP 163",
+        "type": "course",
+        "logic": "any",
+        "text": "COMP 163 or instructor permission"
+      },
+      {
+        "course": null,
+        "type": "permission",
+        "logic": "any",
+        "text": "COMP 163 or instructor permission"
+      }
+    ],
+    "COMP 361": [
+      {
+        "course": "COMP 280",
+        "type": "course",
+        "logic": "all",
+        "text": "COMP 280, MATH 351, and a statistics elective"
+      },
+      {
+        "course": "MATH 351",
+        "type": "course",
+        "logic": "all",
+        "text": "COMP 280, MATH 351, and a statistics elective"
+      },
+      {
+        "course": null,
+        "type": "other",
+        "logic": "all",
+        "text": "Statistics elective"
+      }
+    ],
+    "COMP 363": [
+      {
+        "course": "COMP 280",
+        "type": "course",
+        "logic": "all",
+        "text": "COMP 280"
+      }
+    ],
+    "COMP 368": [
+      {
+        "course": "COMP 280",
+        "type": "course",
+        "logic": "all",
+        "text": "COMP 280"
+      }
+    ],
+    "COMP 420": [
+      {
+        "course": "COMP 280",
+        "type": "course",
+        "logic": "any",
+        "text": "COMP 280 or instructor permission"
+      },
+      {
+        "course": null,
+        "type": "permission",
+        "logic": "any",
+        "text": "COMP 280 or instructor permission"
+      }
+    ],
+    "COMP 421": [
+      {
+        "course": "COMP 285",
+        "type": "course",
+        "logic": "all",
+        "text": "COMP 285"
+      }
+    ],
+    "COMP 422": [
+      {
+        "course": "COMP 280",
+        "type": "course",
+        "logic": "any",
+        "text": "COMP 280 or instructor permission"
+      },
+      {
+        "course": null,
+        "type": "permission",
+        "logic": "any",
+        "text": "COMP 280 or instructor permission"
+      }
+    ],
+    "COMP 423": [
+      {
+        "course": "COMP 280",
+        "type": "course",
+        "logic": "any",
+        "text": "COMP 280 or instructor permission"
+      },
+      {
+        "course": null,
+        "type": "permission",
+        "logic": "any",
+        "text": "COMP 280 or instructor permission"
+      }
+    ],
+    "COMP 440": [
+      {
+        "course": "COMP 285",
+        "type": "course",
+        "logic": "all",
+        "text": "COMP 285"
+      }
+    ],
+    "COMP 454": [
+      {
+        "course": "COMP 280",
+        "type": "course",
+        "logic": "all",
+        "text": "COMP 280"
+      }
+    ],
+    "COMP 469": [
+      {
+        "course": "COMP 350",
+        "type": "course",
+        "logic": "any",
+        "text": "COMP 350 or instructor permission"
+      },
+      {
+        "course": null,
+        "type": "permission",
+        "logic": "any",
+        "text": "COMP 350 or instructor permission"
+      }
+    ],
+    "COMP 494": [
+      {
+        "course": null,
+        "type": "permission",
+        "logic": "all",
+        "text": "Instructor permission"
+      }
+    ],
+    "COMP 411": [
+      {
+        "course": "COMP 410",
+        "type": "course",
+        "logic": "all",
+        "text": "COMP 410"
+      }
+    ],
+    "COMP 452": [
+      {
+        "course": "COMP 285",
+        "type": "course",
+        "logic": "all",
+        "text": "COMP 285"
+      }
+    ],
+    "COMP 453": [
+      {
+        "course": "COMP 285",
+        "type": "course",
+        "logic": "all",
+        "text": "COMP 285"
+      }
+    ],
+    "COMP 463": [
+      {
+        "course": "COMP 285",
+        "type": "course",
+        "logic": "all",
+        "text": "COMP 285 and COMP 375"
+      },
+      {
+        "course": "COMP/ECEN 375",
+        "type": "course",
+        "logic": "all",
+        "text": "COMP 285 and COMP 375"
+      }
+    ],
+    "COMP 468": [
+      {
+        "course": "COMP 280",
+        "type": "course",
+        "logic": "any",
+        "text": "COMP 280 or instructor permission"
+      },
+      {
+        "course": null,
+        "type": "permission",
+        "logic": "any",
+        "text": "COMP 280 or instructor permission"
+      }
+    ],
+    "COMP 485": [
+      {
+        "course": null,
+        "type": "permission",
+        "logic": "all",
+        "text": "Instructor permission"
+      }
+    ]
+  },
+  "SOURCE": "https://www.ncat.edu/coe/departments/cs/undergrad-programs/cs-undergraduate-handbook-2025.pdf"
+}
