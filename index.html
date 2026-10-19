@@ -67,7 +67,7 @@
           <div class="field"><label for="concurrent">Taking at the same time (corequisites)</label><input id="concurrent" placeholder="e.g. ECEN 212, ECEN 218"><div class="hint">Optional · course codes separated by commas</div></div><div class="profile-divider"></div>
           <label class="checkline"><input type="checkbox" id="stats"><span class="custom-check"></span><span>I’ve taken a statistics elective</span></label><label class="checkline"><input type="checkbox" id="permission"><span class="custom-check"></span><span>I have instructor permission, if needed</span></label>
           <label class="checkline"><input type="checkbox" id="readyOnly"><span class="custom-check"></span><span>Only listed course checks met</span></label><div class="profile-note"><span>✳</span> Your details stay in this browser session.</div>
-        <section class="saved-plan"><h3>Your saved plan</h3><p id="planTotal" class="hint"></p><div id="planList"></div><button type="button" class="change-major" id="exportPlan" disabled>Download plan ↓</button></section></aside>
+        <section class="saved-plan"><h3>Your saved plan</h3><p id="planTotal" class="hint"></p><div id="planList"></div></section></aside>
         <section class="chat-card" aria-labelledby="chat-title"><div class="chat-head"><div class="chat-title-wrap"><span class="chat-avatar" aria-hidden="true">✳</span><div><h2 id="chat-title">Ask Aggie Course Guide</h2><span class="chat-subtitle">Your interests → your next class</span></div></div><span class="status"><i></i> COURSE EXPLORER</span></div>
           <div class="matching-controls"><div class="mode-row"><label for="matchingMode">Find courses with</label><select id="matchingMode"><option value="semantic">AI semantic matching</option><option value="tfidf">Keyword matching · TF-IDF</option><option value="bm25">Keyword matching · BM25</option><option value="compare">Compare all three</option></select><button type="button" class="text-button" id="exportComparison" disabled>Download comparison ↓</button></div><p id="aiStatus" role="status" aria-live="polite">Choose your major to get started.</p></div><div class="chat-topic"><span class="topic-label">GET STARTED WITH A TOPIC</span><div class="topic-chips" id="topicChips"></div></div>
           <div class="messages" id="messages" aria-live="polite" aria-relevant="additions text"></div>
@@ -80,6 +80,6 @@
 
   <footer class="foot"><span class="footer-brand"><span class="footer-mark">A</span> AGGIE COURSE GUIDE</span><span>Independent student project · Always confirm course plans with your advisor.</span><a href="https://www.ncat.edu/provost/academic-affairs/curriculum-guides/coe.php" target="_blank" rel="noreferrer">Official curriculum guides ↗</a></footer>
   <noscript><p class="noscript-notice">Enable JavaScript to search the course catalog. You can also use the official curriculum guides linked below.</p></noscript>
-  <script type="module" src="app.js?v=10"></script>
+  <script type="module" src="app.js?v=11"></script>
 </body>
 </html>

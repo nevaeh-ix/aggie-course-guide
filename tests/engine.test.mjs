@@ -58,5 +58,5 @@ test('deployment has local model runtime, worker imports and UI controls',()=>{
  const root=new URL('../',import.meta.url);for(const file of ['vendor/transformers.bundle.js','vendor/ort-wasm-simd-threaded.jsep.mjs','vendor/ort-wasm-simd-threaded.jsep.wasm','models/Xenova/all-MiniLM-L6-v2/onnx/model_quantized.onnx'])assert.ok(fs.statSync(new URL(file,root)).size>100);
  const html=fs.readFileSync(new URL('index.html',root),'utf8');const app=fs.readFileSync(new URL('app.js',root),'utf8');
  for(const id of [...app.matchAll(/\$\('([a-zA-Z]+)'\)/g)].map(m=>m[1]))assert.ok(html.includes(`id="${id}"`),id);
- assert.ok(html.includes('type="module" src="app.js?v=10"'));assert.ok(!html.includes('live AI model yet'));
+ assert.match(html, /type="module" src="app\.js\?v=\d+"/);assert.ok(!html.includes('live AI model yet'));
 });
