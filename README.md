@@ -1,6 +1,6 @@
 # Aggie Course Guide
 
-Aggie Course Guide is a project that recommends courses for students at NC A&T who study engineering. Students pick a state what they wish to learn and then compare courses with methods such as TF-IDF, BM25 or MiniLM. Aggie Course Guide also verifies that the prerequisite information in the catalog matches the courses that the student has listed in their profile.
+Aggie Course Guide is a project that recommends courses for students at NC A&T who study engineering. Students pick a topic what they wish to learn and then compare courses with methods such as TF-IDF, BM25 or MiniLM. Aggie Course Guide also verifies that the prerequisite information in the catalog matches the courses that the student has listed in their profile.
 
 ## Run it locally
 
