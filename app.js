@@ -170,7 +170,7 @@ const topics={
 function chooseMajor(){
  if(!$('program').value){$('program').focus();return;}
  generation++;lastRun=null;resultBubble=null;$('exportComparison').disabled=true;const p=catalog.programs.find(p=>p.id===$('program').value);$('majorGate').hidden=true;$('appShell').hidden=false;$('mainApp').hidden=false;$('unsupported').hidden=true;document.querySelector('.trust-strip').hidden=true;$('chosenMajor').textContent=p.name;
- const courses=catalog.courses.filter(c=>c.programs.includes(p.id));$('coverage').textContent=`${courses.length} courses in this department pool. Concentrations share department courses; inclusion does not mean a course satisfies your track. Sources: ${[...new Set(courses.map(c=>c.sourceYear))].join(', ')}. Confirm current rules and availability with your advisor.`;
+ const courses=catalog.courses.filter(c=>c.programs.includes(p.id));
  $('messages').replaceChildren();message('assistant',`Hey! What would you like to learn or build? I’ll look through ${p.name} courses and show what you may need to take first. You can also say “I’m a freshman” or “I’ve completed COMP 163.”`);
  $('topicChips').replaceChildren();for(const topic of topics[p.id]){const b=el('button',topic,'chip');b.type='button';b.onclick=()=>{if(busy)return;$('interest').value=topic;$('question').value='';ask();};$('topicChips').append(b);}
  $('courseOptions').replaceChildren();const known=new Set(courses.map(c=>c.code));for(const c of courses)for(const m of c.requirementText.matchAll(/\b[A-Z]{2,5}\s+\d{3}\b/g))known.add(normalizeCode(m[0]));for(const code of [...known].sort()){const o=el('option');o.value=code;$('courseOptions').append(o);}
