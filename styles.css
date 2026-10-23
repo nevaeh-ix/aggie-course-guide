@@ -98,6 +98,7 @@ main { max-width: 1180px; margin: auto; padding: 48px 28px 68px; }
   .profile-card { padding: 18px 16px; }
 }
 @media (max-width: 680px) {
+  .brand { min-height: 44px; }
   .topbar { height: 65px; padding: 0 17px; }.topbar-right { gap: 0; }.campus-label { display: none; }.prototype-tag { font-size: 8px; }
   main { padding: 19px 14px 42px; }.welcome { display: flex; flex-direction: column; align-items: stretch; gap: 15px; padding: 27px 20px 0; border-radius: 21px; }.welcome h1 { margin-top: 12px; font-size: clamp(39px, 11vw, 52px); }.welcome-deck { font-size: 14px; }.welcome-points { gap: 8px 15px; margin-top: 16px; font-size: 10px; }.visual-panel { align-self: center; width: min(100%,400px); height: 248px; margin: 0; transform: none; }.sun-disc { left: calc(50% - 104px); }.orbit { left: calc(50% - 131px); }.orbit-two { left: calc(50% - 97px); }.dot-one { left: 48%; }.course-one { left: 12px; }.course-two { right: 10px; }.course-three { left: 15px; bottom: 39px; }
   .major-card { display: block; margin: 0; padding: 17px 15px 13px; border-radius: 17px 17px 0 0; }.major-step { margin-bottom: 10px; }.major-card-copy h2 { font-size: 17px; }.major-card-copy p { margin: 3px 0 12px; }.major-controls { display: flex; flex-direction: column; gap: 8px; }.major-controls .primary { width: 100%; }.major-footnote { margin: 8px 0 0; }
@@ -120,3 +121,65 @@ button:disabled{opacity:.55;cursor:wait;transform:none!important}
 .saved-plan{border-top:1px solid var(--line);margin-top:20px;padding-top:10px}.saved-plan h3{font-size:15px}.plan-row{display:flex;gap:8px;align-items:start;font-size:12px;padding:9px 0;border-bottom:1px solid var(--line)}.plan-row small{display:block;font-size:10px;color:var(--muted);margin-top:4px}.remove-course{background:none;border:0;font-size:23px;color:var(--muted);padding:0 4px}.saved-plan>button{margin-top:15px}.methodology{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:25px;font-size:13px;color:#596579}.methodology summary{font-weight:700;color:var(--navy);cursor:pointer}.methodology a{color:var(--blue)}
 .field label,.interest-field label,.checkline{font-size:12px}.field input,.field select,.interest-field input,.chat-form textarea{font-size:13px}.hint{font-size:11px}.profile-note,.disclosure{font-size:11px}.chip{font-size:11px}.topic-label{font-size:10px}.chat-head h2{font-size:16px}.chat-subtitle{font-size:11px}
 @media(max-width:680px){.messages{max-height:550px}.course-bottom{align-items:start;flex-direction:column}.matching-controls{padding:14px}.matching-controls select{max-width:100%}.profile-card{order:0}.bubble{padding:12px}}
+
+/* Mobile controls should fit the screen and remain easy to tap. */
+.welcome-copy, .major-card, .major-controls, .select-wrap,
+.workspace-layout > *, .chat-title-wrap, .course-top > div, .plan-row > div { min-width: 0; }
+input, select, textarea { max-width: 100%; }
+button, a { touch-action: manipulation; }
+.plan-row > div, .course, .bubble, .profile-note, .disclosure, #chosenMajor { overflow-wrap: anywhere; }
+@media (max-width: 900px) {
+  .workspace-layout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 680px) {
+  .topbar { height: auto; min-height: 65px; padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); padding-top: max(10px, env(safe-area-inset-top)); padding-bottom: 10px; gap: 12px; }
+  main { padding-left: max(14px, env(safe-area-inset-left)); padding-right: max(14px, env(safe-area-inset-right)); padding-bottom: max(30px, env(safe-area-inset-bottom)); }
+  .welcome { padding: 22px 16px 0; }
+  .welcome-copy { order: 0; }
+  .major-card { order: 1; }
+  .visual-panel { order: 2; margin-bottom: 16px; max-width: 100%; }
+  .welcome h1 { font-size: clamp(32px, 9.5vw, 48px); overflow-wrap: anywhere; }
+  .major-footnote { line-height: 1.7; font-size: 11px; }
+  .major-controls, .select-wrap { width: 100%; }
+  .select-wrap select { min-width: 0; font-size: 16px; text-overflow: ellipsis; }
+  .workspace-intro h1 { font-size: clamp(28px, 8vw, 36px); overflow-wrap: anywhere; }
+  .workspace-intro .eyebrow { line-height: 1.7; }
+  .field input, .field select, .interest-field input, .chat-form textarea, .matching-controls select { font-size: 16px; min-height: 48px; min-width: 0; }
+  .chip, .primary, .send, .change-major, .text-button, .save-course { min-height: 44px; font-size: 13px; }
+  .chip { padding: 9px 12px; line-height: 1.4; white-space: normal; max-width: 100%; }
+  .topic-chips .chip { min-height: 44px; font-size: 13px; }
+  .checkline { min-height: 44px; margin: 6px 0; line-height: 1.5; }
+  .remove-course { flex: 0 0 44px; min-width: 44px; min-height: 44px; }
+  .chat-head { flex-wrap: wrap; }
+  .chat-title-wrap { flex: 1 1 200px; }
+  .status { font-size: 10px; }
+  .mode-row { align-items: stretch; flex-direction: column; }
+  .mode-row label { font-size: 13px; }
+  .mode-row select { width: 100%; flex: none; }
+  .messages { max-height: 550px; max-height: min(60svh, 550px); min-height: 160px; overscroll-behavior-y: auto; -webkit-overflow-scrolling: touch; }
+  .bubble { width: 100%; font-size: 14px; }
+  .course-top { flex-wrap: wrap; }
+  .course h3, .compact-course h3 { font-size: 16px; line-height: 1.4; }
+  .course-description, .compact-course .course-description { font-size: 14px; }
+  .course-code, .course-note, .source, .compact-course .course-code, .compact-course .course-note, .compact-course .eligibility, .compact-course summary { font-size: 12px; }
+  .course-bottom, .compact-course .course-bottom { flex-direction: column; align-items: stretch; }
+  .course-bottom a, .compact-course .course-bottom a { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; overflow-wrap: anywhere; }
+  .course details summary, .methodology summary { min-height: 44px; display: list-item; padding-block: 10px; }
+  .course .save-course { width: 100%; white-space: normal; }
+  .chat-form { flex-direction: column; align-items: stretch; }
+  .chat-form textarea { width: 100%; min-height: 86px; }
+  .send { justify-content: center; width: 100%; }
+  .disclosure { font-size: 12px; }
+  .trust-strip { flex-wrap: wrap; justify-content: flex-start; gap: 14px; }
+  .trust-item { flex: 1 1 130px; }
+  .trust-item strong { font-size: 12px; }
+  .trust-item small { font-size: 11px; }
+  .trust-line { display: none; }
+  .foot { font-size: 11px; padding-bottom: max(21px, env(safe-area-inset-bottom)); }
+  .foot a { min-height: 44px; display: inline-flex; align-items: center; white-space: normal; }
+}
+@media (pointer: coarse) {
+  .chip, .save-course, .change-major, .text-button, .remove-course { min-height: 44px; }
+  input, select, textarea { font-size: max(16px, 1em); }
+}
+
