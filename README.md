@@ -1,13 +1,17 @@
 # Aggie Course Guide
 
-Aggie Course Guide is a project that recommends courses for students at NC A&T who study engineering. Students pick a topic what they wish to learn and then compare courses with methods such as TF-IDF, BM25 or MiniLM. Aggie Course Guide also verifies that the prerequisite information in the catalog matches the courses that the student has listed in their profile.
+An interactive course discovery tool for NC A&T engineering students. Students can describe what they want to learn, compare recommendations from TF-IDF, BM25, and MiniLM semantic search, and check prerequisites against completed coursework.
+
+**Built with:** JavaScript, Python, MiniLM, ONNX Runtime Web, and Transformers.js.
+
+**What makes it interesting:** It compares multiple retrieval approaches on the same catalog and separates course relevance from prerequisite eligibility.
 
 ## Run it locally
 
 To run Aggie Course Guide locally use Node.js version 24.19.0 and Python version 3.10 or newer. Execute `npm ci` to install the embedding dependency. The setup process downloads the model and runtime files verifies their SHA-256 hashes and creates course vectors on the local machine. The first setup requires an internet connection. After setup the search function runs locally. Does not need an API key or any paid inference service.
 
 ```bash
-Git clone https://github.com/nevaeh-ix/aggie-course-guide.git
+git clone https://github.com/nevaeh-ix/aggie-course-guide.git
 cd aggie-course-guide
 npm ci
 npm run setup
@@ -16,7 +20,7 @@ npm run build
 npm start
 ```
 
-Open the address [http://127.0.0.1:8000](http://127.0.0.1:8000) in a web browser. Serve the site over HTTP of opening the HTML file directly. The build output is a `dist/` folder that can be hosted by a typical static host. If your system does not have the `python3` command use `python` or `py -3` for the Python commands listed in `package.json`.
+Open the address [http://127.0.0.1:8000](http://127.0.0.1:8000) in a web browser. Serve the site over HTTP rather than opening the HTML file directly. The build output is a `dist/` folder that can be hosted by a typical static host. If your system does not have the `python3` command use `python` or `py -3` for the Python commands listed in `package.json`.
 
 ## Project files
 
@@ -43,7 +47,7 @@ npm run benchmark
 npm run verify-results
 ```
 
-The smoke test executes WebAssembly inference. The benchmark generates `evaluation/results.json` and `evaluation/latest-results.csv` on the local machine. `Verify-results` compares the target metrics with the reported values and verifies the outcomes of the prerequisite tests. Query times may differ from one machine to another. For conditions and instructions on how to view graphs see `evaluation/README.md`.
+The smoke test executes WebAssembly inference. The benchmark generates `evaluation/results.json` and `evaluation/latest-results.csv` on the local machine. `npm run verify-results` compares the target metrics with the reported values and verifies the outcomes of the prerequisite tests. Query times may differ from one machine to another. For conditions and instructions on how to view graphs see `evaluation/README.md`.
 
 The initial comparison used 52 crafted queries covering 26 paired interests. With TF-IDF and BM25 the target course appeared in the three results for 40 out of 52 queries. MiniLM achieved this for all 52 queries. This small catalog-based benchmark does not prove recommendation accuracy or student satisfaction.
 
