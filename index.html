@@ -1,86 +1,291 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="Explore NC A&T College of Engineering courses and find a next class that fits your interests.">
-  <meta name="theme-color" content="#10233f">
-  <title>Aggie Course Guide | NC A&amp;T</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23f2c75c'/%3E%3Cpath d='M20 7 31 31h-7l-2-5h-5l-2 5H9L20 7Zm0 9-2 6h4l-2-6Z' fill='%2310233f'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=mobile-1">
-</head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="#top" aria-label="Aggie Course Guide home">
-      <span class="brand-mark" aria-hidden="true">A</span>
-      <span class="brand-name">Aggie<span>Course Guide</span></span>
-    </a>
-    <div class="topbar-right"><span class="campus-label"><span class="live-dot"></span> NC A&amp;T · College of Engineering</span><span class="prototype-tag">STUDENT PROJECT</span></div>
-  </header>
-
-  <main id="top">
-    <section class="welcome" id="majorGate" aria-labelledby="majorQuestion">
-      <div class="welcome-copy">
-        <div class="eyebrow"><span class="eyebrow-star">✳</span> YOUR NEXT CLASS STARTS HERE</div>
-        <h1 id="majorQuestion">Make your next<br><span>move an Aggie move.</span></h1>
-        <p class="welcome-deck">Find engineering courses that connect to what you want to do. Pick your major first, then tell us what you’re into.</p>
-        <p id="catalogCount" class="catalog-count" role="status">Loading course catalog…</p><div class="welcome-points"><span><span class="check-icon">✓</span> Built around your course path</span><span><span class="check-icon">✓</span> See what you need to take first</span></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Explore NC A&T College of Engineering courses and find a next class that fits your interests."
+    />
+    <meta name="theme-color" content="#10233f" />
+    <title>Aggie Course Guide | NC A&amp;T</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23f2c75c'/%3E%3Cpath d='M20 7 31 31h-7l-2-5h-5l-2 5H9L20 7Zm0 9-2 6h4l-2-6Z' fill='%2310233f'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css?v=mobile-1" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Aggie Course Guide home">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-name">Aggie<span>Course Guide</span></span>
+      </a>
+      <div class="topbar-right">
+        <span class="campus-label"
+          ><span class="live-dot"></span> NC A&amp;T · College of Engineering</span
+        ><span class="prototype-tag">STUDENT PROJECT</span>
       </div>
+    </header>
 
-      <div class="visual-panel" aria-label="Illustration of a course plan connecting engineering interests to recommended courses">
-        <div class="sun-disc"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span><span class="orbit-dot dot-three"></span>
-        <div class="visual-label">YOUR INTERESTS, IN MOTION</div>
-        <div class="visual-course course-one"><span class="visual-course-icon icon-purple">✦</span><span><small>EXPLORE</small><strong>Artificial intelligence</strong></span><span class="tiny-arrow">↗</span></div>
-        <div class="visual-course course-two"><span class="visual-course-icon icon-yellow">⌘</span><span><small>YOUR NEXT STEP</small><strong>COMP 365</strong></span><span class="course-pill">3 credits</span></div>
-        <div class="visual-course course-three"><span class="visual-course-icon icon-green">↗</span><span><small>PREREQUISITE</small><strong>Data Structures</strong></span><span class="done-check">✓</span></div>
-        <div class="visual-caption"><span class="caption-spark">✳</span> A plan made for your path</div>
-      </div>
-
-      <div class="major-card">
-        <div class="major-step"><span>01</span><span>FIRST THINGS FIRST</span></div>
-        <div class="major-card-copy"><h2>What are you studying?</h2><p>Your major helps us point you to the right courses.</p></div>
-        <div class="major-controls">
-          <label class="sr-only" for="program">Choose your engineering major</label>
-          <div class="select-wrap"><span class="select-icon" aria-hidden="true">⌕</span><select id="program"><option value="" selected disabled>Select your engineering major</option></select><span class="select-chevron" aria-hidden="true">⌄</span></div>
-          <button type="button" class="primary" id="continueButton" disabled>Let’s go <span aria-hidden="true">→</span></button>
+    <main id="top">
+      <!-- Pick a major first so the search uses the right course pool. -->
+      <section class="welcome" id="majorGate" aria-labelledby="majorQuestion">
+        <div class="welcome-copy">
+          <div class="eyebrow">
+            <span class="eyebrow-star">✳</span> YOUR NEXT CLASS STARTS HERE
+          </div>
+          <h1 id="majorQuestion">Make your next<br /><span>move an Aggie move.</span></h1>
+          <p class="welcome-deck">
+            Find engineering courses that connect to what you want to do. Pick your major first,
+            then tell us what you’re into.
+          </p>
+          <p id="catalogCount" class="catalog-count" role="status">Loading course catalog…</p>
+          <div class="welcome-points">
+            <span><span class="check-icon">✓</span> Built around your course path</span
+            ><span><span class="check-icon">✓</span> See what you need to take first</span>
+          </div>
         </div>
-        <div class="major-footnote"><span class="lock-icon">✦</span> AI-powered course matching <span class="foot-separator">·</span> Runs on your device</div>
-      </div>
-    </section>
 
-    <section class="trust-strip" aria-label="How it works">
-      <div class="trust-item"><span class="trust-number">01</span><span><strong>Pick your major</strong><small>Start with your program</small></span></div>
-      <span class="trust-line" aria-hidden="true"></span>
-      <div class="trust-item"><span class="trust-number">02</span><span><strong>Share your interests</strong><small>Tell us what sounds exciting</small></span></div>
-      <span class="trust-line" aria-hidden="true"></span>
-      <div class="trust-item"><span class="trust-number">03</span><span><strong>Explore your options</strong><small>See courses worth a look</small></span></div>
-    </section>
+        <div
+          class="visual-panel"
+          aria-label="Illustration of a course plan connecting engineering interests to recommended courses"
+        >
+          <div class="sun-disc"></div>
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <span class="orbit-dot dot-one"></span><span class="orbit-dot dot-two"></span
+          ><span class="orbit-dot dot-three"></span>
+          <div class="visual-label">YOUR INTERESTS, IN MOTION</div>
+          <div class="visual-course course-one">
+            <span class="visual-course-icon icon-purple">✦</span
+            ><span><small>EXPLORE</small><strong>Artificial intelligence</strong></span
+            ><span class="tiny-arrow">↗</span>
+          </div>
+          <div class="visual-course course-two">
+            <span class="visual-course-icon icon-yellow">⌘</span
+            ><span><small>YOUR NEXT STEP</small><strong>COMP 365</strong></span
+            ><span class="course-pill">3 credits</span>
+          </div>
+          <div class="visual-course course-three">
+            <span class="visual-course-icon icon-green">↗</span
+            ><span><small>PREREQUISITE</small><strong>Data Structures</strong></span
+            ><span class="done-check">✓</span>
+          </div>
+          <div class="visual-caption">
+            <span class="caption-spark">✳</span> A plan made for your path
+          </div>
+        </div>
 
-    <div id="appShell" hidden>
-      <section class="workspace-intro"><div><div class="eyebrow"><span class="eyebrow-star">✳</span> YOUR COURSE EXPLORER · <span id="chosenMajor">Computer Science</span></div><h1>What do you want to learn?</h1><p>Start with an interest. Find a class, then see what comes first.</p></div><button type="button" class="change-major" id="changeMajorTop"><span aria-hidden="true">←</span> Change major</button></section>
-      <section class="scope-panel" id="unsupported" hidden><div class="scope-icon">✦</div><h2>We’re still adding your courses.</h2><p id="unsupportedText"></p><button type="button" class="primary" id="chooseAnother">Choose another major <span aria-hidden="true">→</span></button></section>
-      <div id="mainApp" hidden><div class="workspace-layout">
-        <aside class="profile-card" aria-labelledby="profile-title"><div class="section-heading"><span class="section-icon profile-icon">◈</span><div><span class="mini-label">LET’S MAKE IT PERSONAL</span><h2 id="profile-title">Your course profile</h2></div></div><p class="profile-lede">A little context helps us find courses that fit.</p>
-          <div class="field"><label for="standing">What year are you?</label><div class="input-shell"><select id="standing"><option value="" selected>Choose your year</option><option value="freshman">Freshman</option><option value="sophomore">Sophomore</option><option value="junior">Junior</option><option value="senior">Senior</option></select></div><div class="hint">Your year alone does not confirm prerequisites.</div></div>
-          <div class="field"><label for="completed">What classes have you finished?</label><input id="completed" list="courseOptions" placeholder="e.g. COMP 163, COMP 280"><datalist id="courseOptions"></datalist><div class="hint">Add course codes separated by commas</div><div class="quick-courses" id="quickCourses"></div></div>
-          <div class="field"><label for="concurrent">Taking at the same time (corequisites)</label><input id="concurrent" placeholder="e.g. ECEN 212, ECEN 218"><div class="hint">Optional · course codes separated by commas</div></div><div class="profile-divider"></div>
-          <label class="checkline"><input type="checkbox" id="stats"><span class="custom-check"></span><span>I’ve taken a statistics elective</span></label><label class="checkline"><input type="checkbox" id="permission"><span class="custom-check"></span><span>I have instructor permission, if needed</span></label>
-          <label class="checkline"><input type="checkbox" id="readyOnly"><span class="custom-check"></span><span>Only listed course checks met</span></label><div class="profile-note"><span>✳</span> Your details stay in this browser session.</div>
-        <section class="saved-plan"><h3>Your saved plan</h3><p id="planTotal" class="hint"></p><div id="planList"></div></section></aside>
-        <section class="chat-card" aria-labelledby="chat-title"><div class="chat-head"><div class="chat-title-wrap"><span class="chat-avatar" aria-hidden="true">✳</span><div><h2 id="chat-title">Ask Aggie Course Guide</h2><span class="chat-subtitle">Your interests → your next class</span></div></div><span class="status"><i></i> COURSE EXPLORER</span></div>
-          <div class="matching-controls"><div class="mode-row"><label for="matchingMode">Find courses with</label><select id="matchingMode"><option value="semantic">AI semantic matching</option><option value="tfidf">Keyword matching · TF-IDF</option><option value="bm25">Keyword matching · BM25</option><option value="compare">Compare all three</option></select><button type="button" class="text-button" id="exportComparison" disabled>Download comparison ↓</button></div><p id="aiStatus" role="status" aria-live="polite">Choose your major to get started.</p></div><div class="chat-topic"><span class="topic-label">GET STARTED WITH A TOPIC</span><div class="topic-chips" id="topicChips"></div></div>
-          <div class="messages" id="messages" aria-live="polite" aria-relevant="additions text"></div>
-          <input type="hidden" id="interest"><form class="chat-form" id="chatForm"><label class="sr-only" for="question">Describe what you want to learn</label><textarea id="question" maxlength="1000" placeholder="e.g. I’m a freshman and want to design sustainable buildings" rows="2"></textarea><button class="send" id="findButton" type="submit"><span>Find courses</span><span aria-hidden="true">↗</span></button></form>
-          <div class="disclosure"><span class="info-icon">i</span><span><strong>Made for course exploration.</strong> AI matches the meaning of your interests to course text on this device. Keyword options match shared words. Your searches and profile are not sent to an AI provider. Confirm requirements with your advisor.</span></div>
+        <div class="major-card">
+          <div class="major-step"><span>01</span><span>FIRST THINGS FIRST</span></div>
+          <div class="major-card-copy">
+            <h2>What are you studying?</h2>
+            <p>Your major helps us point you to the right courses.</p>
+          </div>
+          <div class="major-controls">
+            <label class="sr-only" for="program">Choose your engineering major</label>
+            <div class="select-wrap">
+              <span class="select-icon" aria-hidden="true">⌕</span
+              ><select id="program">
+                <option value="" selected disabled>Select your engineering major</option></select
+              ><span class="select-chevron" aria-hidden="true">⌄</span>
+            </div>
+            <button type="button" class="primary" id="continueButton" disabled>
+              Let’s go <span aria-hidden="true">→</span>
+            </button>
+          </div>
+          <div class="major-footnote">
+            <span class="lock-icon">✦</span> AI-powered course matching
+            <span class="foot-separator">·</span> Runs on your device
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="How it works">
+        <div class="trust-item">
+          <span class="trust-number">01</span
+          ><span><strong>Pick your major</strong><small>Start with your program</small></span>
+        </div>
+        <span class="trust-line" aria-hidden="true"></span>
+        <div class="trust-item">
+          <span class="trust-number">02</span
+          ><span
+            ><strong>Share your interests</strong><small>Tell us what sounds exciting</small></span
+          >
+        </div>
+        <span class="trust-line" aria-hidden="true"></span>
+        <div class="trust-item">
+          <span class="trust-number">03</span
+          ><span><strong>Explore your options</strong><small>See courses worth a look</small></span>
+        </div>
+      </section>
+
+      <!-- The profile and search workspace opens after a major is selected. -->
+      <div id="appShell" hidden>
+        <section class="workspace-intro">
+          <div>
+            <div class="eyebrow">
+              <span class="eyebrow-star">✳</span> YOUR COURSE EXPLORER ·
+              <span id="chosenMajor">Computer Science</span>
+            </div>
+            <h1>What do you want to learn?</h1>
+            <p>Start with an interest. Find a class, then see what comes first.</p>
+          </div>
+          <button type="button" class="change-major" id="changeMajorTop">
+            <span aria-hidden="true">←</span> Change major
+          </button>
         </section>
-      </div></div>
-    </div>
-</main>
+        <section class="scope-panel" id="unsupported" hidden>
+          <div class="scope-icon">✦</div>
+          <h2>We’re still adding your courses.</h2>
+          <p id="unsupportedText"></p>
+          <button type="button" class="primary" id="chooseAnother">
+            Choose another major <span aria-hidden="true">→</span>
+          </button>
+        </section>
+        <div id="mainApp" hidden>
+          <div class="workspace-layout">
+            <aside class="profile-card" aria-labelledby="profile-title">
+              <div class="section-heading">
+                <span class="section-icon profile-icon">◈</span>
+                <div>
+                  <span class="mini-label">LET’S MAKE IT PERSONAL</span>
+                  <h2 id="profile-title">Your course profile</h2>
+                </div>
+              </div>
+              <p class="profile-lede">A little context helps us find courses that fit.</p>
+              <div class="field">
+                <label for="standing">What year are you?</label>
+                <div class="input-shell">
+                  <select id="standing">
+                    <option value="" selected>Choose your year</option>
+                    <option value="freshman">Freshman</option>
+                    <option value="sophomore">Sophomore</option>
+                    <option value="junior">Junior</option>
+                    <option value="senior">Senior</option>
+                  </select>
+                </div>
+                <div class="hint">Your year alone does not confirm prerequisites.</div>
+              </div>
+              <div class="field">
+                <label for="completed">What classes have you finished?</label
+                ><input
+                  id="completed"
+                  list="courseOptions"
+                  placeholder="e.g. COMP 163, COMP 280"
+                /><datalist id="courseOptions"></datalist>
+                <div class="hint">Add course codes separated by commas</div>
+                <div class="quick-courses" id="quickCourses"></div>
+              </div>
+              <div class="field">
+                <label for="concurrent">Taking at the same time (corequisites)</label
+                ><input id="concurrent" placeholder="e.g. ECEN 212, ECEN 218" />
+                <div class="hint">Optional · course codes separated by commas</div>
+              </div>
+              <div class="profile-divider"></div>
+              <label class="checkline"
+                ><input type="checkbox" id="stats" /><span class="custom-check"></span
+                ><span>I’ve taken a statistics elective</span></label
+              ><label class="checkline"
+                ><input type="checkbox" id="permission" /><span class="custom-check"></span
+                ><span>I have instructor permission, if needed</span></label
+              >
+              <label class="checkline"
+                ><input type="checkbox" id="readyOnly" /><span class="custom-check"></span
+                ><span>Only listed course checks met</span></label
+              >
+              <div class="profile-note">
+                <span>✳</span> Your details stay in this browser session.
+              </div>
+              <section class="saved-plan">
+                <h3>Your saved plan</h3>
+                <p id="planTotal" class="hint"></p>
+                <div id="planList"></div>
+              </section>
+            </aside>
+            <section class="chat-card" aria-labelledby="chat-title">
+              <div class="chat-head">
+                <div class="chat-title-wrap">
+                  <span class="chat-avatar" aria-hidden="true">✳</span>
+                  <div>
+                    <h2 id="chat-title">Ask Aggie Course Guide</h2>
+                    <span class="chat-subtitle">Your interests → your next class</span>
+                  </div>
+                </div>
+                <span class="status"><i></i> COURSE EXPLORER</span>
+              </div>
+              <div class="matching-controls">
+                <div class="mode-row">
+                  <label for="matchingMode">Find courses with</label
+                  ><select id="matchingMode">
+                    <option value="semantic">AI semantic matching</option>
+                    <option value="tfidf">Keyword matching · TF-IDF</option>
+                    <option value="bm25">Keyword matching · BM25</option>
+                    <option value="compare">Compare all three</option></select
+                  ><button type="button" class="text-button" id="exportComparison" disabled>
+                    Download comparison ↓
+                  </button>
+                </div>
+                <p id="aiStatus" role="status" aria-live="polite">
+                  Choose your major to get started.
+                </p>
+              </div>
+              <div class="chat-topic">
+                <span class="topic-label">GET STARTED WITH A TOPIC</span>
+                <div class="topic-chips" id="topicChips"></div>
+              </div>
+              <div
+                class="messages"
+                id="messages"
+                aria-live="polite"
+                aria-relevant="additions text"
+              ></div>
+              <input type="hidden" id="interest" />
+              <form class="chat-form" id="chatForm">
+                <label class="sr-only" for="question">Describe what you want to learn</label
+                ><textarea
+                  id="question"
+                  maxlength="1000"
+                  placeholder="e.g. I’m a freshman and want to design sustainable buildings"
+                  rows="2"
+                ></textarea
+                ><button class="send" id="findButton" type="submit">
+                  <span>Find courses</span><span aria-hidden="true">↗</span>
+                </button>
+              </form>
+              <div class="disclosure">
+                <span class="info-icon">i</span
+                ><span
+                  ><strong>Made for course exploration.</strong> AI matches the meaning of your
+                  interests to course text on this device. Keyword options match shared words. Your
+                  searches and profile are not sent to an AI provider. Confirm requirements with
+                  your advisor.</span
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
 
-  <footer class="foot"><span class="footer-brand"><span class="footer-mark">A</span> AGGIE COURSE GUIDE</span><span>Independent student project · Always confirm course plans with your advisor.</span><a href="https://www.ncat.edu/provost/academic-affairs/curriculum-guides/coe.php" target="_blank" rel="noreferrer">Official curriculum guides ↗</a></footer>
-  <noscript><p class="noscript-notice">Enable JavaScript to search the course catalog. You can also use the official curriculum guides linked below.</p></noscript>
-  <script type="module" src="app.js?v=12"></script>
-</body>
+    <footer class="foot">
+      <span class="footer-brand"><span class="footer-mark">A</span> AGGIE COURSE GUIDE</span
+      ><span>Independent student project · Always confirm course plans with your advisor.</span
+      ><a
+        href="https://www.ncat.edu/provost/academic-affairs/curriculum-guides/coe.php"
+        target="_blank"
+        rel="noreferrer"
+        >Official curriculum guides ↗</a
+      >
+    </footer>
+    <noscript
+      ><p class="noscript-notice">
+        Enable JavaScript to search the course catalog. You can also use the official curriculum
+        guides linked below.
+      </p></noscript
+    >
+    <script type="module" src="app.js?v=12"></script>
+  </body>
 </html>
-
